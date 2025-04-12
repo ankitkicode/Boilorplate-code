@@ -1,8 +1,6 @@
 const nodemailer = require("nodemailer");
 
-const sendOTPEmail = async (email, otp) => {
-  console.log("user: ",process.env.EMAIL_USER)
-  console.log("pass: ",process.env.EMAIL_PASS)
+const sendEmail = async (email, otp, template, additionalInfo = {}) => {
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -16,19 +14,19 @@ const sendOTPEmail = async (email, otp) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: email,
-    subject: "OTP Verification Code",
-    text: `Your OTP code is ${otp}. Please verify your email address.`,
+    subject: template.subject,
+    text: template.text(otp, additionalInfo),
   };
 
   try {
     const info = await transporter.sendMail(mailOptions);
-    console.log("OTP email sent:", info.messageId);
-    let messageId =info.messageId;
-    return {id:messageId};
+    console.log("Email sent:", info.messageId);
+    let messageId = info.messageId;
+    return {id: messageId};
   } catch (error) {
-    console.error("Error sending OTP email:", error);
+    console.error("Error sending email:", error);
     let err = error.message;
-    return {error:err};
+    return {error: err};
   }
 };
 
@@ -57,4 +55,5 @@ function generateOTP(length = 6) {
     return OTP;
 };
 
-module.exports = {sendOTPEmail,generateOTP};
+// Exporting the functions for sending emails and generating OTPs
+module.exports = {sendEmail, generateOTP};

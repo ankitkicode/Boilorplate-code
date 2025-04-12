@@ -1,12 +1,15 @@
 const MESSAGES = {
     SUCCESS: {
-      DATA_RETRIEVED: "Data retrieved successfully.",
-      DATA_SAVED: "Data saved successfully.",
-      DATA_UPDATED: "Data updated successfully.",
-      DATA_DELETED: "Data deleted successfully.",
-      LOGIN_SUCCESS: "Login successful.",
-      LOGOUT_SUCCESS: "Logout successful.",
-      ACCOUNT_CREATED: "Account created successfully.",
+      GENERAL: "The operation was successful.",
+      CREATED: "The resource was successfully created.",
+      UPDATED: "The resource was successfully updated.",
+      DELETED: "The resource was successfully deleted.",
+      EMAIL: "Email sent successfully",
+      COOKIE:"logout successfull",
+      PLAN_CANCEL:"Subscription cancelled successfully",
+      LOGIN: "Login successful.",
+      REGISTER: "Registration successful.",
+      LOGOUT: "Logout successful.",
     },
     ERROR: {
       NOT_FOUND: "Requested resource not found.",
@@ -17,6 +20,8 @@ const MESSAGES = {
       DUPLICATE_ENTRY: "Duplicate entry found.",
       DATA_NOT_FOUND: "No data found.",
       LOGIN_FAILED: "Invalid credentials, login failed.",
+      REGISTER_FAILED: "Registration failed.",
+      LOGOUT_FAILED: "Logout failed.",
     },
     VALIDATION: {
       REQUIRED_FIELD: "This field is required!",
@@ -32,19 +37,7 @@ const MESSAGES = {
       PARAMS:"Provide id in params",
       SUPER_ADMIN:"SuperAdmin user not found",
       PLAN_CANCEL:"No active subscription found",
-  },
-  SUCCESS: {
-    GENERAL: "The operation was successful.",
-    CREATED: "The resource was successfully created.",
-    UPDATED: "The resource was successfully updated.",
-    DELETED: "The resource was successfully deleted.",
-    EMAIL: "Email sent successfully",
-    COOKIE:"logout successfull",
-    PLAN_CANCEL:"Subscription cancelled successfully",
-
-}
-
+  }
   };
   
   module.exports = MESSAGES;
-  

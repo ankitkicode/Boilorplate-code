@@ -1,17 +1,4 @@
-const STATUS_CODES = {
-    SUCCESS: 200,
-    CREATED: 201,
-    NO_CONTENT: 204,
-    BAD_REQUEST: 400,
-    UNAUTHORIZED: 401,
-    FORBIDDEN: 403,
-    NOT_FOUND: 404,
-    CONFLICT: 409,
-    SERVER_ERROR: 500,
-  };
-
-
-  const HTTP_STATUS_CODES = {
+const HTTP_STATUS_CODES = {
     INFORMATIONAL: {
         CONTINUE: 100,
         SWITCHING_PROTOCOLS: 101,
@@ -25,9 +12,7 @@ const STATUS_CODES = {
         NON_AUTHORITATIVE_INFORMATION: 203,
         NO_CONTENT: 204,
         RESET_CONTENT: 205,
-        PARTIAL_CONTENT: 206,
-        FALSE:false,
-        TRUE:true
+        PARTIAL_CONTENT: 206
     },
     REDIRECTION: {
         MULTIPLE_CHOICES: 300,
@@ -63,6 +48,4 @@ const STATUS_CODES = {
   
   module.exports = {
     HTTP_STATUS_CODE: HTTP_STATUS_CODES,
-    STATUS_CODES: STATUS_CODES,
   };
-  
