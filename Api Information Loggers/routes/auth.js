@@ -7,7 +7,7 @@ router.post('/login', (req, res) => {
     res.locals.errorMessage = 'Missing userId or password';
     return res.status(400).send('❌ Missing userId or password');
   }
-
+  res.locals.errorMessage = 'User LoggedIn Successfully ';
   res.send(`✅ Login attempt recorded for user: ${userId} with email: ${email}`);
 });
 

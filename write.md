@@ -1,6 +1,6 @@
 # README.md
 
-This folder contains utility functions for the front-end of the application. The functions are designed to perform various tasks such as:
+This folder contains utility functions for the front-end and Backend of the application. The functions are designed to perform various tasks such as:
 
 * Setting, getting, and removing items from local storage
 * Fetching and validating authentication tokens
