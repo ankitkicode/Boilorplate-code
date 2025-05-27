@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\Ankit Jatav\\Desktop\\Rotations\\logs\\.dd4168073045c6a6f737d273d918f1080c967d8e-audit.json",
+    "files": [
+        {
+            "date": 1748328394739,
+            "name": "C:\\Users\\Ankit Jatav\\Desktop\\Rotations\\logs\\user-UR_12-2025-05-27.log",
+            "hash": "f77772c4b1a31a7b125c46bc954f989ea2007666ba613341b4df79566863191a"
+        }
+    ],
+    "hashType": "sha256"
+}
