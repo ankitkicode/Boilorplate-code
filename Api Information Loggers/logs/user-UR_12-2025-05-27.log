@@ -8,3 +8,5 @@
 2025-05-27T07:14:09.647Z [User UR_12] INFO: API: POST /auth/login | Status: 200 | IP: 127.0.0.1 | Location: Unknown Location | Device: Desktop | OS: Windows | Browser: Chrome | Duration: 11ms | Body: {"userId":"UR_12","email":"ankit2@gmail.com"} | Reason: User LoggedIn Successfully 
 
 2025-05-27T07:14:25.226Z [User UR_12] WARN: API: POST /auth/login | Status: 400 | IP: 127.0.0.1 | Location: Unknown Location | Device: Desktop | OS: Windows | Browser: Chrome | Duration: 3ms | Body: {"userId":"UR_12","email":"ankit2@gmail.com"} | Reason: Missing userId or password
+
+2025-05-27T08:20:07.503Z [User UR_12] INFO: API: POST /auth/profile | Status: 200 | IP: 127.0.0.1 | Location: Unknown Location | Device: Desktop | OS: Windows | Browser: Chrome | Duration: 3ms | Body: {"userId":"UR_12","email":"ankit2@gmail.com"} | Reason: N/A
