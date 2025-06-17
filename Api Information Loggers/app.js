@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const authRoutes = require('./routes/auth');
 const logUserActivity = require('./middleware/logMiddleware');
+const trackEvents = require('./routes/trackEvents');
 
 app.use(express.json());
 
@@ -9,6 +10,7 @@ app.use(express.json());
 app.use(logUserActivity);
 
 app.use('/auth', authRoutes);
+app.use(trackEvents);
 
 const PORT = 3000;
 app.listen(PORT, () => {

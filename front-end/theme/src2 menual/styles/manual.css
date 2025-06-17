@@ -1,0 +1,6 @@
+body[data-theme="light"] { --bg: #fff; --text: #000; --card: #f3f3f3; }
+body[data-theme="dark"]  { --bg: #222; --text: #fff; --card: #333; }
+
+.theme-background { background: var(--bg); color: var(--text); min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+.theme-card       { background: var(--card); padding: 2rem; border-radius: 0.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+.toggle-btn       { padding: 0.5rem 1rem; background: #007bff; color: #fff; border:none; border-radius:0.25rem; cursor:pointer; }

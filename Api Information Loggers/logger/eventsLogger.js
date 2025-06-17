@@ -1,8 +1,12 @@
 const { createLogger, format, transports } = require('winston');
 const DailyRotateFile = require('winston-daily-rotate-file');
 const path = require('path');
+const fs = require('fs');
 
-function getUserLogger(userId) {
+function getEventLogger(userId) {
+  const logDir = path.join(__dirname, '../logs/events');
+  if (!fs.existsSync(logDir)) fs.mkdirSync(logDir, { recursive: true });
+
   return createLogger({
     level: 'info',
     format: format.combine(
@@ -12,16 +16,15 @@ function getUserLogger(userId) {
       })
     ),
     transports: [
-      new transports.Console(),
       new DailyRotateFile({
-        filename: path.join(__dirname, `../logs/user-${userId}-%DATE%.log`),
+        filename: path.join(logDir, `user-${userId}-%DATE%-events.log`),
         datePattern: 'YYYY-MM-DD',
-        zippedArchive: true,
-        maxSize: '5m',
-        maxFiles: '14d'
+        zippedArchive: false,      // Set to true if you want logs compressed
+        maxSize: '5m',             // Max file size
+        maxFiles: '7d'             // Keep logs for last 7 days only
       })
     ]
   });
 }
 
-module.exports = getUserLogger;
+module.exports = getEventLogger;

@@ -1,4 +1,4 @@
-const getUserLogger = require('../logger/userLogger');
+const getUserLogger = require('../logger/apisLogger');
 const geoip = require('geoip-lite');
 
 function logUserActivity(req, res, next) {
@@ -47,6 +47,7 @@ function logUserActivity(req, res, next) {
     else if (statusCode >= 400) level = 'warn';
     else if (statusCode >= 200) level = 'info';
     else level = 'debug';
+    
     if (statusCode >= 400 && statusCode < 500) {
       res.locals.errorMessage = res.locals.errorMessage || 'Client Error';
     } else if (statusCode >= 500) {

@@ -17,7 +17,6 @@ router.post('/profile', (req, res) => {
     res.locals.errorMessage = 'Missing userId or email';
     return res.status(400).send('❌ Missing userId, name, or email');
   }
-
   res.send(`✅ Profile updated for user: ${userId}`);
 });
 
@@ -27,7 +26,6 @@ router.post('/logout', (req, res) => {
     res.locals.errorMessage = 'Missing userId';
     return res.status(400).send('❌ Missing userId');
   }
-
   res.send(`✅ Logout recorded for user: ${userId}`);
 });
 

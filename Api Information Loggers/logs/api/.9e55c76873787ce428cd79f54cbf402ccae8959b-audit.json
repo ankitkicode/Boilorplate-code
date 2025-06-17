@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\Ankit Jatav\\Desktop\\Boilorplate code\\Api Information Loggers\\logs\\api\\.9e55c76873787ce428cd79f54cbf402ccae8959b-audit.json",
+    "files": [
+        {
+            "date": 1748337595888,
+            "name": "C:\\Users\\Ankit Jatav\\Desktop\\Boilorplate code\\Api Information Loggers\\logs\\api\\user-Unknown-2025-05-27.log",
+            "hash": "909580815100730e957537c5f849fef9aaa97485ed4a22e52989d09b5552a51d"
+        }
+    ],
+    "hashType": "sha256"
+}

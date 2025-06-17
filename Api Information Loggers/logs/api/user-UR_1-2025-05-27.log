@@ -1,0 +1,2 @@
+2025-05-27T09:19:41.084Z [User UR_1] INFO: API: POST /auth/logout | Status: 200 | IP: 127.0.0.1 | Location: Unknown Location | Device: Desktop | OS: Windows | Browser: Chrome | Duration: 3ms | Body: {"userId":"UR_1","email":"ankit2@gmail.com"} | Reason: N/A
+2025-05-27T09:19:41.506Z [User UR_1] INFO: API: POST /auth/logout | Status: 200 | IP: 127.0.0.1 | Location: Unknown Location | Device: Desktop | OS: Windows | Browser: Chrome | Duration: 2ms | Body: {"userId":"UR_1","email":"ankit2@gmail.com"} | Reason: N/A
