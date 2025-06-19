@@ -8,7 +8,7 @@ export default function ThemeSelector() {
 
   return (
     <div className="theme-selector">
-      {themes.map(t => (
+      {themes.map(t => (    
         <button
           key={t}
           className={`theme-button ${t}`}
